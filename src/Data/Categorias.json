@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "idPadre": null,
+        "description": "Producto"
+    },
+    {
+        "id": 2,
+        "idPadre": 1,
+        "description": "Cat 1"
+    },
+    {
+        "id": 3,
+        "idPadre": 2,
+        "description": "Cat 1.1"
+    },
+    {
+        "id": 4,
+        "idPadre": 2,
+        "description": "Cat 1.2"
+    },
+    {
+        "id": 5,
+        "idPadre": 1,
+        "description": "Cat 2"
+    },
+    {
+        "id": 6,
+        "idPadre": 5,
+        "description": "Cat 2.1"
+    },   
+    {
+        "id": 7,
+        "idPadre": 6,
+        "description": "Cat 2.1.1"
+    },   
+    {
+        "id": 8,
+        "idPadre": 6,
+        "description": "Cat 2.1.2"
+    },              
+    {
+        "id": 9,
+        "idPadre": 8,
+        "description": "Cat 2.1.2.1"
+    },          
+    {
+        "id": 10,
+        "idPadre": 1,
+        "description": "Cat 3"
+    },
+    {
+        "id": 11,
+        "idPadre": 2,
+        "description": "Cat 1.3"
+    },      
+    {
+        "id": 12,
+        "idPadre": 2,
+        "description": "Cat 1.4"
+    },  
+    {
+        "id": 13,
+        "idPadre": 5,
+        "description": "Cat 2.2"
+    },    
+    {
+        "id": 14,
+        "idPadre": 5,
+        "description": "Cat 2.3"
+    }    
+]
