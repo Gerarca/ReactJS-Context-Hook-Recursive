@@ -46,6 +46,14 @@ const CategoriaState = (props) => {
         return true; 
     };      
 
+    //Funcion para editar categoria, retorna las categorias existentes, sin tomar en cuenta el id al que se esta editando
+    const listadoCatEdit = (id) => {
+        if( !id ){
+            return null;
+        } 
+        return categorias.filter(item => item.id !== parseInt(id));
+    }
+
     //para llamar la funcion recursiva, que servira para construir el arbor de la data
     const categoriaOrdenada = () => {    
         return OrderRecursivo( categorias, categorias[0].id);
@@ -72,6 +80,7 @@ const CategoriaState = (props) => {
                             AddCategoria,
                             DelCategoria,
                             EditCategoria,
+                            listadoCatEdit,
                             categoriaOrdenada
                     }}                 
         >

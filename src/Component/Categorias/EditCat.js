@@ -9,7 +9,7 @@ import './styles.scss';
 
 const EditCat = () => {
     //inicializamos y le damos acceso a las variables / funciones para acceder a la data
-    const { categorias, EditCategoria }  = useContext( CategoriaContext );
+    const { categorias, listadoCatEdit, EditCategoria }  = useContext( CategoriaContext );
     //para inicializar y obtener cada value de los inputs
     const [selectedCat, setSelectedCat] = useState({
         id: '',
@@ -30,7 +30,8 @@ const EditCat = () => {
     useEffect(() => {         
         const selectedCat = categorias.find( item => item.id == id);
         setSelectedCat(selectedCat);
-    },[categorias, id]);     
+        listadoCatEdit(id);
+    },[listadoCatEdit, categorias, id]);     
 
     //validacion de los input
     const handleValidation = () => {   
@@ -113,7 +114,7 @@ const EditCat = () => {
                                     required
                                 >
                                 <option value=""> Seleccione una Categoria... </option>
-                                {categorias.map( item => {
+                                {listadoCatEdit(id).map( item => {
                                     return <option key={item.id}
                                         value={ item.id }
                                     >{item.description}</option>
